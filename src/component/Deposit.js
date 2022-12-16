@@ -1,0 +1,71 @@
+import React, { useState } from "react";
+import './style/Deposit.css'
+import { InputGroup, FormControl, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import NavbarLog from "./NavbarLog";
+
+const Deposit = () => {
+
+    const [amount, setAmount] = useState()
+    const [desc, setDesc] = useState('')
+    const navigate = useNavigate()
+
+    async function updateBalance(event) {
+        event.preventDefault()
+
+        const req = await fetch('http://localhost:5000/api/balance', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'x-access-token': localStorage.getItem('token')
+            },
+            body: JSON.stringify({
+                balance: amount
+            })
+        })
+
+        const data = await req.json()
+        console.log(data.status)
+        if (data.status === 'ok') {
+            navigate('/profile')
+        }
+        else {
+            alert("error")
+            navigate('/failed')
+        }
+    }
+    return (
+        <div>
+            <NavbarLog />
+            <div className="bghdep">
+                <h1>Enjoy your free deposit with Us</h1>
+                <div className="leftc">
+                    <h3>Deposit Form</h3>
+                    <>
+                        <InputGroup className="mb-3">
+                            <InputGroup.Text>$ Amount</InputGroup.Text>
+                            <FormControl
+                                aria-label="Amount (to the nearest Rupee)"
+                                value={amount}
+                                onChange={(e) => setAmount(e.target.value)} 
+                            />
+                            <InputGroup.Text>.00</InputGroup.Text>
+                        </InputGroup>
+
+                        <InputGroup>
+                            <InputGroup.Text>Description of the transaction</InputGroup.Text>
+                            <FormControl 
+                                as="textarea" 
+                                aria-label="With textarea"
+                                value={desc}
+                                onChange={(e) => setDesc(e.target.value)} />
+                        </InputGroup>
+                        <Button className="mt-3" variant="primary" size="lg" onClick={updateBalance}>Deposit</Button>
+                    </>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Deposit;

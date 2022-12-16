@@ -1,0 +1,36 @@
+.gridpf{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.image{
+    border-radius: 50% ;
+}
+
+.bjh{
+    background-image: url(../../images/bank.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+.mt-4 {
+    background-color: rgb(129, 110, 110);
+    color: black;
+}
+
+.my-4 {
+    color: black;
+}
+
+.display-4 {
+    color: black;
+}
+
+.c2 {
+    color: black;
+}
+
+.profile-info {
+    color: black;
+}

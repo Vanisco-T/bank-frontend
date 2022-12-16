@@ -1,0 +1,11 @@
+.main1 {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  padding-top: 48%;
+  padding-bottom: 300px;
+  background-color: #9396a4;
+  background-image: url("../images/bank.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

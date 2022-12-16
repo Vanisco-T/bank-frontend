@@ -1,0 +1,49 @@
+.bghdep{
+    background-image: url("../../images/bank.jpeg");
+    background-size: cover;
+    width: 100%;
+    color: white;
+    height: 100vh;
+    
+    font-family: 'Lato', sans-serif
+}
+
+
+.mb-3 {
+    box-shadow: none;
+}
+.bghdep h1{
+    padding-top: 0.5em;
+    padding-left: 0.5em;
+    color: white;
+}
+h1{
+    text-align: center;
+}
+h3 {
+    color: white;
+}
+.leftc{
+    padding: 15%;
+}
+
+.rightc img{
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    height: 50%;
+}
+
+@media screen and (max-width: 650px){
+    .bghdep{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .rightc{
+        display: none;
+    }
+
+    .leftc{
+        padding: 8%;
+    }
+}

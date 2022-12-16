@@ -1,0 +1,64 @@
+.bgh{
+    background-image: url(../../images/bank.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    color: white;
+    height: 100vh;
+}
+
+
+
+.transfer-title {
+    color: white;
+    position: relative;
+}
+
+.transfer-heading {
+    padding-left: 1rem;
+}
+
+.loanform{
+    width:50%;
+    margin-top: 1em;
+}
+
+.bgh h1{
+    padding-top: 0.5em;
+}
+
+.bghloan h2{
+    padding-top: 0.5em;
+}
+
+.leftc{
+    position: relative;
+    bottom: 30px;
+    padding: 15%;
+}
+
+.rightc img{
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    height: 50%;
+}
+
+@media screen and (max-width: 650px){
+    .bgh{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .loanform{
+        width: 100%;
+        padding-right: 2em;
+    }
+
+    .rightc{
+        display: none;
+    }
+
+    .leftc{
+        padding: 8%;
+    }
+}
