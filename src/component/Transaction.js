@@ -16,7 +16,7 @@ const Transaction = () => {
     }
 
     async function getTransactions() {
-        const req = await fetch('http://localhost:5000/api/transaction', {
+        const req = await fetch('https://backend-c0yf.onrender.com/api/transaction', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

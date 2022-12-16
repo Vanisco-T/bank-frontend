@@ -12,8 +12,8 @@ const Deposit = () => {
 
     async function updateBalance(event) {
         event.preventDefault()
-
-        const req = await fetch('http://localhost:5000/api/balance', {
+        
+        const req = await fetch('https://backend-c0yf.onrender.com/api/balance', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

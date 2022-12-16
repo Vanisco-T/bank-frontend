@@ -19,7 +19,7 @@ const Profile = () => {
 
     async function populateInfo() {
 
-        const req = await fetch('http://localhost:5000/api/user', {
+        const req = await fetch('https://backend-c0yf.onrender.com/api/user', {
             headers: {
                 'x-access-token': localStorage.getItem('token')
             },
@@ -42,7 +42,7 @@ const Profile = () => {
 
     async function populateBalance() {
 
-        const req = await fetch('http://localhost:5000/api/balance', {
+        const req = await fetch('https://backend-c0yf.onrender.com/api/balance', {
             headers: {
                 'x-access-token': localStorage.getItem('token')
             },

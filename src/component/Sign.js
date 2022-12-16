@@ -18,7 +18,7 @@ const Sign = () => {
 	
 	const registerUser = async (event) => {
 		event.preventDefault()
-		const response = await fetch("http://localhost:5000/api/register", {
+		const response = await fetch("https://backend-c0yf.onrender.com/api/register", {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'

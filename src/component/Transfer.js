@@ -15,7 +15,7 @@ const Transfer = () => {
     async function transferMoney(event) {
         event.preventDefault()
 
-        const req = await fetch('http://localhost:5000/api/transaction', {
+        const req = await fetch('https://backend-c0yf.onrender.com/api/transaction', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
