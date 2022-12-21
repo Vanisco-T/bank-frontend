@@ -12,7 +12,7 @@ const Widthdraw = () => {
     async function updateBalance(event) {
         event.preventDefault()
         
-        const req = await fetch('https://backend-c0yf.onrender.com/api/balance', {
+        const req = await fetch('https://backend-c0yf.onrender.com/api/widthdraw', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const Widthdraw = () => {
                             <InputGroup.Text>.00</InputGroup.Text>
                         </InputGroup>
                         
-                        <Button className="mt-3" variant="primary" size="lg" onClick={updateBalance}>Deposit</Button>
+                        <Button className="mt-3" variant="primary" size="lg" onClick={updateBalance}>Widthdraw</Button>
                     </>
                 </div>
             </div>
