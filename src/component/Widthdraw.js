@@ -12,7 +12,8 @@ const Widthdraw = () => {
     async function updateBalance(event) {
         event.preventDefault()
         
-        const req = await fetch('https://backend-c0yf.onrender.com/api/widthdraw', {
+        
+        const req = await fetch('https://backend-c0yf.onrender.com/api/remove', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
