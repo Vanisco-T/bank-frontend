@@ -19,6 +19,7 @@ function NavbarLog() {
             <Nav.Link eventKey={2} href="/transfer">Transfer</Nav.Link>
             <Nav.Link eventKey={3} href="/transaction">Your Transaction</Nav.Link>
             <Nav.Link eventKey={2} href="/deposit">Deposit</Nav.Link>
+            <Nav.Link eventKey={2} href="/widthdraw">Widthdraw</Nav.Link>
             <Nav.Link eventKey={2} href="/">Log out</Nav.Link>
           </Nav>
         </Navbar.Collapse>

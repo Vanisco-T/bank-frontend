@@ -8,6 +8,7 @@ import Profile from './component/Profile';
 import Deposit from './component/Deposit';
 import Transaction  from './component/Transaction';
 import Transfer from './component/Transfer';
+import Widthdraw from './component/Widthdraw';
 function App() {
   return (
     <Router>
@@ -19,6 +20,7 @@ function App() {
           <Route path='/deposit' element={<Deposit/>}/>
           <Route path='/transaction' element={<Transaction/>}/>
           <Route path='/transfer' element={<Transfer/>}/>
+          <Route path='/widthdraw' element={<Widthdraw/>}/>
       </Routes>
     </Router>
   );
